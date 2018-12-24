@@ -1,5 +1,8 @@
 export default {
   es: {
+    general:{
+      site_name: 'Mercado Ejemplo'
+    },
     messages: {
       processing: 'Procesando la petición',
       accessDenied: 'Acceso denegado',
@@ -41,7 +44,7 @@ export default {
     },
     welcome: {
       title: 'Bienvenido a {app}',
-      content: 'En este curso aprenderás a utilizar Vuejs 2 + Firebase + Firestore para desarrollar aplicaciones en tiempo real con Vuetify desde 0',
+      content: 'Este sistema es una muestra, creada particulamente para los recruiter y gente que me quiera examinar de alguna forma tecnica.',
       call_to_action: 'Quiero saber más!',
       action_button: 'Ver más'
     },
