@@ -1,0 +1,2 @@
+comandos para las dependencias principales de este proyecto
+	npm install --save fake firebase moment vue-i18n vue-mugen-scroll vuetify vuex
