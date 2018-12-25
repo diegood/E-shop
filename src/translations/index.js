@@ -1,7 +1,10 @@
 export default {
   es: {
-    general:{
+    general: {
       site_name: 'Mercado Ejemplo'
+    },
+    footer:{
+      explain_system: 'Este e-commerse esta conectado con una base de datos no relacional FireStore de FireBase. La idea de este sistema es mostrar la calidad de codigo que genero y llegado el caso que en algun momento quiera cambiar de tabajo no tenga que hacer un test inmeso que nos haga perder tiempo a todos, tratare de codear lo mejor posible y usar la mayor cantidad de cosas conocidas por mi para ser evaluado en un futuro.'
     },
     messages: {
       processing: 'Procesando la petición',
@@ -60,7 +63,7 @@ export default {
       submit: 'Acceder'
     },
     register: {
-      title: 'Registrarme en la plataforma',
+      title: 'Crear una cuenta',
       submit: 'Registrarme'
     },
     validations: {
