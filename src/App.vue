@@ -1,11 +1,12 @@
 <template>
   <main>
     <v-app>
-      <v-content>
+      <v-content class="mt-0 pt-0">
         <guest-navigation></guest-navigation>
-        <v-container class="mb-3">
-          <router-view />
+        <v-container>
+          <router-view class="mt-2"/>
         </v-container>
+        <app-footer/>
       </v-content>
     </v-app>
   </main>
@@ -13,10 +14,12 @@
 
 <script>
   import GuestNavigation from '@/navigations/guest'
+  import AppFooter from '@/Components/Footer'
   export default {
     name: 'App',
     components: {
-      GuestNavigation
+      GuestNavigation,
+      AppFooter
     }
   }
 </script>
