@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "fake": "^0.2.2",
+    "faker": "^4.1.0",
     "firebase": "^5.7.1",
     "moment": "^2.23.0",
     "vue": "^2.5.2",

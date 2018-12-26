@@ -25,7 +25,7 @@ module.exports = {
     "eol-last": "off",
     "key-spacing": "off",
     "space-before-function-paren": "off",
-    "no-trailing-spaces": "off"
+    "no-trailing-spaces": "off",
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development

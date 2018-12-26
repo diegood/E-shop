@@ -1,5 +1,5 @@
 <template>
-    <v-jumbotron color="grey lighten-2">
+    <v-responsive color="grey lighten-2">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex>
@@ -15,7 +15,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </v-jumbotron>
+    </v-responsive>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Auth-form action="register" v-on:process="register($event)" />
+    <Auth-form action="login" v-on:process="login($event)" />
     <Toast v-if="toastShow" :show="toastShow" :text="message" :timeout="timeout" />
   </div>
 </template>
@@ -10,7 +10,7 @@
   import Toast from '@/components/Toast'
   import {db} from '@/main'
   export default {
-    name: 'Register',
+    name: 'Login',
     components: {Toast, 'Auth-form': Auth},
     data() {
       return {
@@ -20,17 +20,12 @@
       }
     },
     computed: {},
+    mounted() {},
     methods: {
-      register(user) {
-        this.$store.dispatch('firebaseRegister', user)
-        .then((userRegistered) => {
-          let data = {
-            uid: userRegistered.user.uid,
-            email: user.email,
-            role: 'customer'
-          }
-          db.collection('users').doc(userRegistered.user.uid).set(data).then(() => {
-            this.$store.commit('setRole', data.role)
+      login (user) {
+        this.$store.dispatch('firebaseLogin', user)
+        .then(data => {
+          db.collection('users').doc(data.user.uid).onSnapshot(ss => {
             this.$router.push('/')
           })
         })
