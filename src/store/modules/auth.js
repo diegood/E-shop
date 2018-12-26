@@ -1,5 +1,5 @@
-import firebase from 'firebase'
-import { stat } from 'fs';
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 export default {
   state: {
@@ -9,10 +9,10 @@ export default {
   },
   actions: {
     firebaseRegister: ({commit}, user) => {
-      return firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+      return firebase.auth().createUserWithEmailAndPassword(user.email, user.passw)
     },
     firebaseLogin: ({commit}, user) => {
-      return firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+      return firebase.auth().signInWithEmailAndPassword(user.email, user.passw)
     },
     firebaseLogout: () => {
       return firebase.auth().signOut()
@@ -20,13 +20,13 @@ export default {
   },
   mutations: {
     setUser: (state, user) => {
-      if(user){
+      if (user) {
         state.user = {
           uid: user.uid,
           email: user.email
         }
         state.logged = true
-      }else{
+      } else {
         state.user = null
         state.logged = false
       }
@@ -42,7 +42,7 @@ export default {
     role: (state) => {
       return state.role
     },
-    isCustomer: (state) =>{
+    isCustomer: (state) => {
       return state.role === 'customer'
     }
   }
