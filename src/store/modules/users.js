@@ -16,7 +16,7 @@ export default {
     }
   },
   getters: {
-    userDialog: (state) => {
+    usersDialog: (state) => {
       return state.dialog
     },
     userForEdit: (state) => {

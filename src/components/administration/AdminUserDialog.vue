@@ -1,8 +1,8 @@
 <template>
-  <v-dialog v-model="userDialog" max-width="700px">
+  <v-dialog v-model="usersDialog" max-width="700px">
 
     <v-btn dark slot="activator" class="indigo lighten-1 white--text text-xs-center mb-2">
-      {{$t('admin.usersTable.newUser')}}
+      {{ $t('admin.usersTable.newUser')}}
     </v-btn>
 
     <v-card>
@@ -48,7 +48,7 @@ import {mapGetters} from 'vuex'
 export default {
   name: 'AdminUserDialog',
   methods: {
-    close() {
+    close () {
       this.$store.commit('toggleUsersDialog', {
         editMode: false,
         user: {
@@ -59,6 +59,7 @@ export default {
       })
     },
     add() {
+      this.$store.dispatch('firebaseBasicRegister', 'prueba')
       this.userForEdit.uid = faker.random.alphaNumeric(16)
       this.userForEdit.role = 'customer'
       let user = Object.assign({}, this.userForEdit)
@@ -86,7 +87,7 @@ export default {
     }
   },
   computed: {
-    userDialog:{
+    usersDialog:{
       get() {
         return this.$store.getters.usersDialog
       },
