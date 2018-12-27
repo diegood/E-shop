@@ -4,12 +4,9 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
-=======
 package-lock.json
 src/config/firebase.js
 *firebase.js
->>>>>>> f9b17d0de6034c45d53aabed40083a8d86251819
 
 # Editor directories and files
 .idea
@@ -17,8 +14,4 @@ src/config/firebase.js
 *.suo
 *.ntvs*
 *.njsproj
-<<<<<<< HEAD
 *.sln
-=======
-*.sln
->>>>>>> f9b17d0de6034c45d53aabed40083a8d86251819
