@@ -16,7 +16,11 @@ export default {
     }
   },
   getters: {
+<<<<<<< HEAD
     userDialog: (state) => {
+=======
+    usersDialog: (state) => {
+>>>>>>> f9b17d0de6034c45d53aabed40083a8d86251819
       return state.dialog
     },
     userForEdit: (state) => {
